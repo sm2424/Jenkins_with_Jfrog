@@ -31,6 +31,7 @@ pipeline {
       }
       stage('Image Scanning Trivy'){
             steps{
+                echo 'this'
                //sh 'trivy image localhost:8082/java-web-app-docker/demoapp:$BUILD_NUMBER > $WORKSPACE/trivy-image-scan/trivy-image-scan-$BUILD_NUMBER.txt'
             }
      }
