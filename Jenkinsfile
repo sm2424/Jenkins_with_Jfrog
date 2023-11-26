@@ -36,7 +36,7 @@ pipeline {
      }
      stage('Uploading Image Scan to Jrog Artifactory'){
          steps{
-          sh 'jf rt upload --url http://172.17.0.3:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} trivy-image-scan/trivy-image-scan-$BUILD_NUMBER.txt trivy-scan-files/'           
+             sh 'jf rt upload --url http://52.66.203.34:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} trivy-image-scan/trivy-image-scan-$BUILD_NUMBER.txt trivy-scan-files/'           
          }
      }
      stage('Pushing Docker Image into Jfrog'){
