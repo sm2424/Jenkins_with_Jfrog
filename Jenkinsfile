@@ -18,7 +18,7 @@ pipeline {
         }
        stage('Upload Binaries to Jfrog Artifactory') {
         steps {
-        sh 'jf rt upload --url http://172.17.0.3:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} target/demo-0.0.1-SNAPSHOT.jar java-web-app/'
+        sh 'jf rt upload --url http://52.66.203.34:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} target/demo-0.0.1-SNAPSHOT.jar java-web-app/'
           }
         }
       stage('Building Docker Image'){
